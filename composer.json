@@ -4,5 +4,21 @@
   "type": "drupal-module",
   "homepage": "https://github.com/localgovdrupal/localgov_campaigns",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "require": {
+   "drupal/entity_reference_layout": "^1.0-alpha7",
+    "drupal/paragraphs": "^1.11"
+  },
+  "extra": {
+    "enable-patching": true,
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/entity_reference_layout": {
+        "Fix missing paragraphs thumbnail, https://www.drupal.org/project/entity_reference_layout/issues/3134453": "https://www.drupal.org/files/issues/2020-06-10/3134453-get-paragraph-icon-url-5.patch"
+      }
+    }
+  }
 }
