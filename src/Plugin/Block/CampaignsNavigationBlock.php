@@ -80,27 +80,32 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase {
       ];
     }
 
-    foreach ($campaign->get('field_campaign_pages')->getValue() as $node_data) {
-      $node = Node::load($node_data['target_id']);
-      if (is_null($node)) {
-        continue;
-      }
+    $campaign_pages = $campaign->get('field_campaign_pages')->getValue();
+    $campaign_pages_count = $campaign->get('field_campaign_pages')->count();
 
-      $campaignNid = $node->id();
+    if ($campaign_pages_count > 1) {
+      foreach ($campaign_pages as $node_data) {
+        if (isset($node_data['target_id'])) {
+          $node = Node::load($node_data['target_id']);
+          if (is_null($node)) {
+            continue;
+          }
+        }
 
-      if ($currentNid == $campaignNid) {
-        $links[] = [
-          'title' => $node->label(),
-          'url' => $node->toUrl(),
-          'class' => 'is-active',
-        ];
-      }
+        $campaignNid = $node->id();
 
-      else {
-        $links[] = [
-          'title' => $node->label(),
-          'url' => $node->toUrl(),
-        ];
+        if ($currentNid == $campaignNid) {
+          $links[] = [
+            'title' => $node->label(),
+            'url' => $node->toUrl(),
+            'class' => 'is-active',
+          ];
+        } else {
+          $links[] = [
+            'title' => $node->label(),
+            'url' => $node->toUrl(),
+          ];
+        }
       }
     }
 
