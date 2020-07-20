@@ -4,25 +4,28 @@ dependencies:
   config:
     - field.field.node.localgov_campaigns_page.body
     - field.field.node.localgov_campaigns_page.field_campaign
-    - field.field.node.localgov_campaigns_page.field_page_builder_advanced
+    - field.field.node.localgov_campaigns_page.field_page_content
     - field.field.node.localgov_campaigns_page.field_topic_term
+    - field.field.node.localgov_campaigns_page.localgov_campaigns_summary
     - node.type.localgov_campaigns_page
   module:
-    - entity_reference_revisions
+    - layout_paragraphs
     - user
+_core:
+  default_config_hash: mJuMC5Xmmc90Nml546oi7N-OAyogeXtgz_cyilUFqhs
 id: node.localgov_campaigns_page.default
 targetEntityType: node
 bundle: localgov_campaigns_page
 mode: default
 content:
-  field_page_builder_advanced:
+  field_page_content:
     weight: 1
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
+    type: layout_paragraphs
     region: content
   links:
     weight: 0
@@ -33,4 +36,5 @@ hidden:
   body: true
   field_campaign: true
   field_topic_term: true
+  localgov_campaigns_summary: true
   search_api_excerpt: true
