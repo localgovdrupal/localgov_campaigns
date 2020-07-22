@@ -43,8 +43,6 @@ third_party_settings:
         required_fields: false
       label: Description
       region: content
-_core:
-  default_config_hash: '-x6mhGIK5LIsPCXIjbJTqDRRp5BuDm5ya3XY-VYcjY0'
 id: node.localgov_campaigns_page.default
 targetEntityType: node
 bundle: localgov_campaigns_page

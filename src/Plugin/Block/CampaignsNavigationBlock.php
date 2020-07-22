@@ -20,8 +20,7 @@ use Drupal\node\Entity\Node;
  *   admin_label = "Campaign navigation",
  * )
  */
-class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
-{
+class CampaignsNavigationBlock extends CampaignsAbstractBlockBase {
 
   /**
    * {@inheritdoc}
@@ -59,8 +58,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
    *
    * @throws \Drupal\Core\Entity\EntityMalformedException
    */
-  protected function formatLinks(NodeInterface $campaign, NodeInterface $currentNode)
-  {
+  protected function formatLinks(NodeInterface $campaign, NodeInterface $currentNode) {
 
     if ($currentNode instanceof NodeInterface) {
       $currentNid = $currentNode->id();
@@ -74,7 +72,8 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
         'url' => $campaign->toUrl(),
         'class' => 'is-active',
       ];
-    } else {
+    }
+    else {
       $links[] = [
         'title' => $campaign->label(),
         'url' => $campaign->toUrl(),
@@ -101,7 +100,8 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
             'url' => $node->toUrl(),
             'class' => 'is-active',
           ];
-        } else {
+        }
+        else {
           $links[] = [
             'title' => $node->label(),
             'url' => $node->toUrl(),
@@ -132,8 +132,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
   /**
    * {@inheritdoc}
    */
-  public function getCacheTags()
-  {
+  public function getCacheTags() {
     $campaign_nodes = $this->listOverviewAndPages();
     $campaign_cache_tags = $this->prepareCacheTagsForCampaign($campaign_nodes);
     return Cache::mergeTags(parent::getCacheTags(), $campaign_cache_tags);
@@ -151,8 +150,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
    * @return array
    *   List of strings.
    */
-  protected function prepareCacheTagsForCampaign(array $campaign_nodes): array
-  {
+  protected function prepareCacheTagsForCampaign(array $campaign_nodes): array {
     $list_of_tag_collections = array_map(function (CacheableDependencyInterface $cacheable): array {
       return $cacheable->getCacheTags();
     }, $campaign_nodes);
@@ -166,8 +164,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
    * @return array
    *   List of nodes.
    */
-  protected function listOverviewAndPages(): array
-  {
+  protected function listOverviewAndPages(): array {
     $overview = $this->getCampaign();
     $page_refs = $overview->field_campaign_pages;
     $page_nodes = array_map(function (EntityReferenceItem $ref) {
@@ -183,4 +180,5 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase
 
     return $related_campaign_nodes_w_sequential_keys;
   }
+
 }

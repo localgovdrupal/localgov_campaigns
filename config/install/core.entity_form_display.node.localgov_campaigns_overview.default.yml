@@ -95,8 +95,6 @@ third_party_settings:
         required_fields: false
       label: 'Child pages'
       region: content
-_core:
-  default_config_hash: gZQeaPTcYDi5mEr9WvBcVyS5ZbdPDoabz3ux7t_38PI
 id: node.localgov_campaigns_overview.default
 targetEntityType: node
 bundle: localgov_campaigns_overview

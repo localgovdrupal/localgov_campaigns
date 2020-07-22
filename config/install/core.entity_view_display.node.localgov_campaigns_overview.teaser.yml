@@ -15,8 +15,6 @@ dependencies:
     - node.type.localgov_campaigns_overview
   module:
     - user
-_core:
-  default_config_hash: 6KVHDA2Db5CkywsZbfDkfcxfAMRVLK_E3fXt9kxLXaw
 id: node.localgov_campaigns_overview.teaser
 targetEntityType: node
 bundle: localgov_campaigns_overview
