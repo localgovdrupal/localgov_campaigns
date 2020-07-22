@@ -25,8 +25,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase {
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
+  public function build() {
     $build = [];
 
     if ($campaign = $this->getCampaign()) {
@@ -116,8 +115,7 @@ class CampaignsNavigationBlock extends CampaignsAbstractBlockBase {
   /**
    * {@inheritdoc}
    */
-  protected function blockAccess(AccountInterface $account)
-  {
+  protected function blockAccess(AccountInterface $account) {
     if (
       !is_null($this->node) &&
       $this->node->hasField('field_hide_sidebar') &&
