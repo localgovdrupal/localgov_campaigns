@@ -80,7 +80,7 @@ content:
     settings:
       preview_view_mode: default
       nesting_depth: 0
-      require_layouts: true
+      require_layouts: 1
     third_party_settings: {  }
     type: layout_paragraphs
     region: content
