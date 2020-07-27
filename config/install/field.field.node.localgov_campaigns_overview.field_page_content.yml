@@ -4,17 +4,7 @@ dependencies:
   config:
     - field.storage.node.field_page_content
     - node.type.localgov_campaigns_overview
-    - paragraphs.paragraphs_type.box_link_page_builder
-    - paragraphs.paragraphs_type.call_out_box_page_builder
-    - paragraphs.paragraphs_type.fact_boxes_page_builder
-    - paragraphs.paragraphs_type.link_and_summary_page_builder
-    - paragraphs.paragraphs_type.link_and_summary_page_builder_
     - paragraphs.paragraphs_type.page_section
-    - paragraphs.paragraphs_type.localgov_image
-    - paragraphs.paragraphs_type.localgov_text
-    - paragraphs.paragraphs_type.quote_box_page_builder
-    - paragraphs.paragraphs_type.text_field_page_builder
-    - paragraphs.paragraphs_type.video_page_builder
   module:
     - entity_reference_revisions
 id: node.localgov_campaigns_overview.field_page_content

@@ -38,6 +38,7 @@ class CampaignPagesTest extends BrowserTestBase {
    */
   public static $modules = [
     'localgov_campaigns',
+    'localgov_campaigns_paragraphs',
     'field_ui',
     'pathauto',
   ];

@@ -3,15 +3,7 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_elements_second
-    - paragraphs.paragraphs_type.box_link_page_builder
-    - paragraphs.paragraphs_type.call_out_box_page_builder
-    - paragraphs.paragraphs_type.fact_boxes_page_builder
-    - paragraphs.paragraphs_type.image_page_builder
-    - paragraphs.paragraphs_type.link_and_summary_page_builder
     - paragraphs.paragraphs_type.page_builderlayout
-    - paragraphs.paragraphs_type.quote_box_page_builder
-    - paragraphs.paragraphs_type.text_field_page_builder
-    - paragraphs.paragraphs_type.video_page_builder
   module:
     - entity_reference_revisions
 id: paragraph.page_builderlayout.field_elements_second
