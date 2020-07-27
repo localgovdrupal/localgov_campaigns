@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text_plain
+    - field.storage.paragraph.localgov_text_plain
     - paragraphs.paragraphs_type.quote
-id: paragraph.quote.field_text_plain
-field_name: field_text_plain
+id: paragraph.quote.localgov_text_plain
+field_name: localgov_text_plain
 entity_type: paragraph
 bundle: quote
 label: Text

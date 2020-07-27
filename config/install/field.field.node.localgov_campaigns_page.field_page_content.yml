@@ -10,8 +10,8 @@ dependencies:
     - paragraphs.paragraphs_type.image_page_builder
     - paragraphs.paragraphs_type.link_and_summary_page_builder
     - paragraphs.paragraphs_type.page_section
-    - paragraphs.paragraphs_type.pagebuilder_image
-    - paragraphs.paragraphs_type.pagebuilder_text
+    - paragraphs.paragraphs_type.localgov_image
+    - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.quote_box_page_builder
     - paragraphs.paragraphs_type.text_field_page_builder
     - paragraphs.paragraphs_type.video_page_builder
@@ -39,14 +39,14 @@ settings:
       fact_boxes_page_builder: fact_boxes_page_builder
       image_page_builder: image_page_builder
       link_and_summary_page_builder: link_and_summary_page_builder
-      pagebuilder_image: pagebuilder_image
-      pagebuilder_text: pagebuilder_text
+      localgov_image: localgov_image
+      localgov_text: localgov_text
       page_section: page_section
       quote_box_page_builder: quote_box_page_builder
       text_field_page_builder: text_field_page_builder
       video_page_builder: video_page_builder
     target_bundles_drag_drop:
-      advanced_links:
+      localgov_link:
         weight: 26
         enabled: false
       box_link:
@@ -64,7 +64,7 @@ settings:
       campaign_navigation:
         weight: 31
         enabled: false
-      contact:
+      localgov_contact:
         weight: 32
         enabled: false
       fact_box:
@@ -94,10 +94,10 @@ settings:
       page_section:
         enabled: true
         weight: 43
-      pagebuilder_image:
+      localgov_image:
         enabled: true
         weight: 40
-      pagebuilder_text:
+      localgov_text:
         enabled: true
         weight: 41
       quote:

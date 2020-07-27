@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.box_link.field_image
+    - field.field.paragraph.box_link.localgov_image
     - field.field.paragraph.box_link.field_link
     - image.style.thumbnail
     - paragraphs.paragraphs_type.box_link
@@ -14,7 +14,7 @@ targetEntityType: paragraph
 bundle: box_link
 mode: default
 content:
-  field_image:
+  localgov_image:
     weight: 101
     settings:
       preview_image_style: thumbnail

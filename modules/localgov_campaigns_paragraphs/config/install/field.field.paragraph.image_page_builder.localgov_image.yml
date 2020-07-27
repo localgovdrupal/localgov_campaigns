@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
+    - field.storage.paragraph.localgov_image
     - paragraphs.paragraphs_type.image_page_builder
   module:
     - image
-id: paragraph.image_page_builder.field_image
-field_name: field_image
+id: paragraph.image_page_builder.localgov_image
+field_name: localgov_image
 entity_type: paragraph
 bundle: image_page_builder
 label: Image

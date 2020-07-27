@@ -27,7 +27,7 @@ settings:
       fact_boxes_page_builder:
         weight: 7
         enabled: false
-      advanced_links:
+      localgov_link:
         weight: 8
         enabled: false
       fact_box:

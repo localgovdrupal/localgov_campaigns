@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
-    - paragraphs.paragraphs_type.text_and_image_50_50
+    - field.storage.paragraph.localgov_image
+    - paragraphs.paragraphs_type.box_link
   module:
     - image
-id: paragraph.text_and_image_50_50.field_image
-field_name: field_image
+id: paragraph.box_link.localgov_image
+field_name: localgov_image
 entity_type: paragraph
-bundle: text_and_image_50_50
+bundle: box_link
 label: Image
 description: ''
 required: false

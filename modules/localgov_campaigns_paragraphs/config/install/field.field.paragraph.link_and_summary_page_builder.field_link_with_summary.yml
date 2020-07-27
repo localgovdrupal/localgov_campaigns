@@ -24,7 +24,7 @@ settings:
     target_bundles:
       link_and_summary: link_and_summary
     target_bundles_drag_drop:
-      advanced_links:
+      localgov_link:
         weight: 19
         enabled: false
       box_link:
@@ -60,10 +60,10 @@ settings:
       page_builderlayout:
         weight: 30
         enabled: false
-      pagebuilder_image:
+      localgov_image:
         weight: 31
         enabled: false
-      pagebuilder_text:
+      localgov_text:
         weight: 32
         enabled: false
       quote_box_page_builder:

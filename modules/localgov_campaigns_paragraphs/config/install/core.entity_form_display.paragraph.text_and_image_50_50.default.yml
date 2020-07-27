@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_and_image_50_50.field_image
-    - field.field.paragraph.text_and_image_50_50.field_text
+    - field.field.paragraph.text_and_image_50_50.localgov_image
+    - field.field.paragraph.text_and_image_50_50.localgov_text
     - image.style.thumbnail
     - paragraphs.paragraphs_type.text_and_image_50_50
   module:
@@ -14,7 +14,7 @@ targetEntityType: paragraph
 bundle: text_and_image_50_50
 mode: default
 content:
-  field_image:
+  localgov_image:
     weight: 1
     settings:
       preview_image_style: thumbnail
@@ -22,7 +22,7 @@ content:
     third_party_settings: {  }
     type: image_image
     region: content
-  field_text:
+  localgov_text:
     weight: 0
     settings:
       rows: 5

@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.text_field_page_builder.field_text
+    - field.field.paragraph.text_field_page_builder.localgov_text
     - paragraphs.paragraphs_type.text_field_page_builder
   module:
     - text
@@ -11,7 +11,7 @@ targetEntityType: paragraph
 bundle: text_field_page_builder
 mode: default
 content:
-  field_text:
+  localgov_text:
     weight: 101
     settings:
       rows: 5

@@ -2,12 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_text
+    - field.storage.paragraph.localgov_text
     - paragraphs.paragraphs_type.text_field_page_builder
   module:
     - text
-id: paragraph.text_field_page_builder.field_text
-field_name: field_text
+id: paragraph.text_field_page_builder.localgov_text
+field_name: localgov_text
 entity_type: paragraph
 bundle: text_field_page_builder
 label: Text
