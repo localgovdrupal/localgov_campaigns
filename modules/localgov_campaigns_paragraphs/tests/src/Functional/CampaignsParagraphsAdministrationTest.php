@@ -28,45 +28,45 @@ class CampaignsParagraphsAdministrationTest extends ParagraphsTestBase {
 
     // Check paragraph types installed.
     $this->drupalGet('/admin/structure/paragraphs_type');
-    $this->assertSession()->pageTextContains('box_link');
-    $this->assertSession()->pageTextContains('call_out_box');
-    $this->assertSession()->pageTextContains('fact_box');
-    $this->assertSession()->pageTextContains('link_and_summary');
-    $this->assertSession()->pageTextContains('quote');
-    $this->assertSession()->pageTextContains('video_page_builder');
+    $this->assertSession()->pageTextContains('localgov_box_link');
+    $this->assertSession()->pageTextContains('localgov_call_out_box');
+    $this->assertSession()->pageTextContains('localgov_fact_box');
+    $this->assertSession()->pageTextContains('localgov_link_and_summary');
+    $this->assertSession()->pageTextContains('localgov_quote');
+    $this->assertSession()->pageTextContains('localgov_video');
 
     // Check 'Box link' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/box_link/fields');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_box_link/fields');
     $this->assertSession()->pageTextContains('localgov_image');
-    $this->assertSession()->pageTextContains('field_link');
+    $this->assertSession()->pageTextContains('localgov_link');
 
     // Check 'Call out box' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/call_out_box/fields');
-    $this->assertSession()->pageTextContains('field_background_image');
-    $this->assertSession()->pageTextContains('field_body_text');
-    $this->assertSession()->pageTextContains('field_button');
-    $this->assertSession()->pageTextContains('field_header_text');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_call_out_box/fields');
+    $this->assertSession()->pageTextContains('localgov_background_image');
+    $this->assertSession()->pageTextContains('localgov_body_text');
+    $this->assertSession()->pageTextContains('localgov_button');
+    $this->assertSession()->pageTextContains('localgov_header_text');
 
     // Check 'Fact box' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/fact_box/fields');
-    $this->assertSession()->pageTextContains('field_above_text');
-    $this->assertSession()->pageTextContains('field_background');
-    $this->assertSession()->pageTextContains('field_below_text');
-    $this->assertSession()->pageTextContains('field_fact');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_fact_box/fields');
+    $this->assertSession()->pageTextContains('localgov_above_text');
+    $this->assertSession()->pageTextContains('localgov_background');
+    $this->assertSession()->pageTextContains('localgov_below_text');
+    $this->assertSession()->pageTextContains('localgov_fact');
 
     // Check 'Link and summary' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/link_and_summary/fields');
-    $this->assertSession()->pageTextContains('field_summary');
-    $this->assertSession()->pageTextContains('field_link');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_link_and_summary/fields');
+    $this->assertSession()->pageTextContains('localgov_summary');
+    $this->assertSession()->pageTextContains('localgov_link');
 
     // Check 'Quote' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/quote/fields');
-    $this->assertSession()->pageTextContains('field_author');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_quote/fields');
+    $this->assertSession()->pageTextContains('localgov_author');
     $this->assertSession()->pageTextContains('localgov_text_plain');
 
     // Check 'Video' fields.
-    $this->drupalGet('/admin/structure/paragraphs_type/video_page_builder/fields');
-    $this->assertSession()->pageTextContains('field_video_url');
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_video/fields');
+    $this->assertSession()->pageTextContains('localgov_video_url');
   }
 
 }

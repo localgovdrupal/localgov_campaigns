@@ -22,12 +22,12 @@ settings:
     negate: 0
     target_bundles:
       text_field_page_builder: text_field_page_builder
-      fact_boxes_page_builder: fact_boxes_page_builder
-      call_out_box_page_builder: call_out_box_page_builder
-      quote_box_page_builder: quote_box_page_builder
-      video_page_builder: video_page_builder
-      box_link_page_builder: box_link_page_builder
-      link_and_summary_page_builder: link_and_summary_page_builder
+      localgov_fact_boxes_page_builder: localgov_fact_boxes_page_builder
+      localgov_call_out_box_page_builder: localgov_call_out_box_page_builder
+      localgov_quote_box_page_builder: localgov_quote_box_page_builder
+      localgov_video: localgov_video
+      localgov_box_link_page_builder: localgov_box_link_page_builder
+      localgov_link_and_summary_page_builder: localgov_link_and_summary_page_builder
       image_page_builder: image_page_builder
     target_bundles_drag_drop:
       localgov_link:
@@ -39,31 +39,31 @@ settings:
       text_field_page_builder:
         enabled: true
         weight: 7
-      fact_boxes_page_builder:
+      localgov_fact_boxes_page_builder:
         enabled: true
         weight: 7
       topic_list_builder:
         weight: 8
         enabled: false
-      call_out_box_page_builder:
+      localgov_call_out_box_page_builder:
         enabled: true
         weight: 9
-      fact_box:
+      localgov_fact_box:
         weight: 9
         enabled: false
-      quote_box_page_builder:
+      localgov_quote_box_page_builder:
         enabled: true
         weight: 15
-      box_link:
+      localgov_box_link:
         weight: 18
         enabled: false
-      video_page_builder:
+      localgov_video:
         enabled: true
         weight: 18
-      box_link_page_builder:
+      localgov_box_link_page_builder:
         enabled: true
         weight: 19
-      call_out_box:
+      localgov_call_out_box:
         weight: 20
         enabled: false
       homepage_ia_blocks:
@@ -78,16 +78,16 @@ settings:
       localgov_text:
         weight: 28
         enabled: false
-      link_and_summary:
+      localgov_link_and_summary:
         weight: 28
         enabled: false
-      link_and_summary_page_builder:
+      localgov_link_and_summary_page_builder:
         enabled: true
         weight: 29
       image_page_builder:
         enabled: true
         weight: 30
-      quote:
+      localgov_quote:
         weight: 36
         enabled: false
 field_type: entity_reference_revisions

@@ -4,15 +4,15 @@ dependencies:
   config:
     - field.storage.node.field_page_content
     - node.type.localgov_campaigns_overview
-    - paragraphs.paragraphs_type.box_link
-    - paragraphs.paragraphs_type.call_out_box
-    - paragraphs.paragraphs_type.fact_box
-    - paragraphs.paragraphs_type.link_and_summary
+    - paragraphs.paragraphs_type.localgov_box_link
+    - paragraphs.paragraphs_type.localgov_call_out_box
+    - paragraphs.paragraphs_type.localgov_fact_box
+    - paragraphs.paragraphs_type.localgov_link_and_summary
     - paragraphs.paragraphs_type.localgov_image
     - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.page_section
-    - paragraphs.paragraphs_type.quote
-    - paragraphs.paragraphs_type.video_page_builder
+    - paragraphs.paragraphs_type.localgov_quote
+    - paragraphs.paragraphs_type.localgov_video
   module:
     - entity_reference_revisions
 id: node.localgov_campaigns_overview.field_page_content
@@ -30,26 +30,26 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      box_link: box_link
-      call_out_box: call_out_box
-      fact_box: fact_box
-      link_and_summary: link_and_summary
+      localgov_box_link: localgov_box_link
+      localgov_call_out_box: localgov_call_out_box
+      localgov_fact_box: localgov_fact_box
+      localgov_link_and_summary: localgov_link_and_summary
       localgov_image: localgov_image
       localgov_text: localgov_text
-      quote: quote
+      localgov_quote: localgov_quote
       page_section: page_section
-      video_page_builder: video_page_builder
+      localgov_video: localgov_video
     target_bundles_drag_drop:
-      box_link:
+      localgov_box_link:
         enabled: true
         weight: 1
-      call_out_box:
+      localgov_call_out_box:
         enabled: true
         weight: 2
-      fact_box:
+      localgov_fact_box:
         enabled: true
         weight: 3
-      link_and_summary:
+      localgov_link_and_summary:
         enabled: true
         weight: 5
       localgov_image:
@@ -61,10 +61,10 @@ settings:
       page_section:
         enabled: true
         weight: 100
-      quote:
+      localgov_quote:
         enabled: true
         weight: 6
-      video_page_builder:
+      localgov_video:
         enabled: true
         weight: 8
 field_type: entity_reference_revisions

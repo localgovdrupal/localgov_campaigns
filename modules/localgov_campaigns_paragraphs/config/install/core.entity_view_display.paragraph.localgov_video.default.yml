@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_video.localgov_video_url
+    - paragraphs.paragraphs_type.localgov_video
+id: paragraph.localgov_video.default
+targetEntityType: paragraph
+bundle: localgov_video
+mode: default
+content: {  }
+hidden:
+  localgov_video_url: true
