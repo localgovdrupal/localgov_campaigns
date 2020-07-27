@@ -4,11 +4,17 @@ dependencies:
   config:
     - field.storage.node.field_page_content
     - node.type.localgov_campaigns_page
+    - paragraphs.paragraphs_type.box_link
+    - paragraphs.paragraphs_type.call_out_box
+    - paragraphs.paragraphs_type.fact_box
+    - paragraphs.paragraphs_type.link_and_summary
+    - paragraphs.paragraphs_type.localgov_image
+    - paragraphs.paragraphs_type.localgov_text
     - paragraphs.paragraphs_type.page_section
+    - paragraphs.paragraphs_type.quote
+    - paragraphs.paragraphs_type.video_page_builder
   module:
     - entity_reference_revisions
-_core:
-  default_config_hash: w0QVLApoD3SEG2sTJdjiIfjo-PfYfgMP6FbKNFnLwhc
 id: node.localgov_campaigns_page.field_page_content
 field_name: field_page_content
 entity_type: node
@@ -24,91 +30,41 @@ settings:
   handler_settings:
     negate: 0
     target_bundles:
-      box_link_page_builder: box_link_page_builder
-      call_out_box_page_builder: call_out_box_page_builder
-      fact_boxes_page_builder: fact_boxes_page_builder
-      image_page_builder: image_page_builder
-      link_and_summary_page_builder: link_and_summary_page_builder
+      box_link: box_link
+      call_out_box: call_out_box
+      fact_box: fact_box
+      link_and_summary: link_and_summary
       localgov_image: localgov_image
       localgov_text: localgov_text
       page_section: page_section
-      quote_box_page_builder: quote_box_page_builder
-      text_field_page_builder: text_field_page_builder
+      quote: quote
       video_page_builder: video_page_builder
     target_bundles_drag_drop:
-      localgov_link:
-        weight: 26
-        enabled: false
       box_link:
-        weight: 27
-        enabled: false
-      box_link_page_builder:
         enabled: true
-        weight: 28
+        weight: 1
       call_out_box:
-        weight: 29
-        enabled: false
-      call_out_box_page_builder:
         enabled: true
-        weight: 30
-      campaign_navigation:
-        weight: 31
-        enabled: false
-      localgov_contact:
-        weight: 32
-        enabled: false
+        weight: 2
       fact_box:
-        weight: 33
-        enabled: false
-      fact_boxes_page_builder:
         enabled: true
-        weight: 34
-      from_library:
-        weight: 35
-        enabled: false
-      image_page_builder:
-        enabled: true
-        weight: 36
+        weight: 3
       link_and_summary:
-        weight: 37
-        enabled: false
-      link_and_summary_page_builder:
         enabled: true
-        weight: 38
-      link_and_summary_page_builder_:
-        weight: 39
-        enabled: false
-      page_builderlayout:
-        weight: 42
-        enabled: false
-      page_section:
-        enabled: true
-        weight: 43
+        weight: 5
       localgov_image:
         enabled: true
-        weight: 40
+        weight: 4
       localgov_text:
         enabled: true
-        weight: 41
+        weight: 7
+      page_section:
+        enabled: true
+        weight: 100
       quote:
-        weight: 44
-        enabled: false
-      quote_box_page_builder:
         enabled: true
-        weight: 45
-      text:
-        weight: 46
-        enabled: false
-      text_and_image_50_50:
-        weight: 47
-        enabled: false
-      text_field_page_builder:
-        enabled: true
-        weight: 48
-      topic_list_builder:
-        weight: 49
-        enabled: false
+        weight: 6
       video_page_builder:
         enabled: true
-        weight: 50
+        weight: 8
 field_type: entity_reference_revisions

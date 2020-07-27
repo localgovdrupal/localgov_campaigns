@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: video_page_builder
-label: 'Video (Page builder)'
+label: 'Video'
 icon_uuid: null
 description: ''
 behavior_plugins: {  }
