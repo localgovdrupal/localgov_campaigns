@@ -6,11 +6,10 @@ dependencies:
     - field.field.paragraph.localgov_call_out_box.localgov_body_text
     - field.field.paragraph.localgov_call_out_box.localgov_button
     - field.field.paragraph.localgov_call_out_box.localgov_header_text
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.localgov_call_out_box
   module:
-    - image
     - link
+    - media_library
     - text
 id: paragraph.localgov_call_out_box.default
 targetEntityType: paragraph
@@ -18,13 +17,12 @@ bundle: localgov_call_out_box
 mode: default
 content:
   localgov_background_image:
-    type: image_image
-    weight: 3
-    region: content
+    type: media_library_widget
+    weight: 4
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
+    region: content
   localgov_body_text:
     weight: 1
     settings:

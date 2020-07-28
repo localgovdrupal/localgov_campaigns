@@ -66,7 +66,7 @@ class CampaignsParagraphsAdministrationTest extends ParagraphsTestBase {
 
     // Check 'Video' fields.
     $this->drupalGet('/admin/structure/paragraphs_type/localgov_video/fields');
-    $this->assertSession()->pageTextContains('localgov_video_url');
+    $this->assertSession()->pageTextContains('localgov_video');
   }
 
 }

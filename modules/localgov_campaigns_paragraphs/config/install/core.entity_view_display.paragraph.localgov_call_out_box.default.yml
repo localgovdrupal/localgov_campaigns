@@ -6,10 +6,8 @@ dependencies:
     - field.field.paragraph.localgov_call_out_box.localgov_body_text
     - field.field.paragraph.localgov_call_out_box.localgov_button
     - field.field.paragraph.localgov_call_out_box.localgov_header_text
-    - image.style.large_21_9
     - paragraphs.paragraphs_type.localgov_call_out_box
   module:
-    - image
     - link
     - text
 id: paragraph.localgov_call_out_box.default
@@ -18,13 +16,13 @@ bundle: localgov_call_out_box
 mode: default
 content:
   localgov_background_image:
-    weight: 3
+    type: entity_reference_entity_view
+    weight: 4
     label: hidden
     settings:
-      image_style: large_21_9
-      image_link: ''
+      view_mode: full
+      link: false
     third_party_settings: {  }
-    type: image
     region: content
   localgov_body_text:
     weight: 1

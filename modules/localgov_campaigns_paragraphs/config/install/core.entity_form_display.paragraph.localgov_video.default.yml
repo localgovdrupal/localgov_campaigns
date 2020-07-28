@@ -2,22 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.localgov_video.localgov_video_url
+    - field.field.paragraph.localgov_video.localgov_video
     - paragraphs.paragraphs_type.localgov_video
   module:
-    - link
+    - media_library
 id: paragraph.localgov_video.default
 targetEntityType: paragraph
 bundle: localgov_video
 mode: default
 content:
-  localgov_video_url:
-    weight: 101
+  localgov_video:
+    type: media_library_widget
+    weight: 102
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: link_default
     region: content
 hidden:
   created: true

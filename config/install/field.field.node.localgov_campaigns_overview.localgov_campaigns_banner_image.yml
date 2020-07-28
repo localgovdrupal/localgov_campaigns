@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.localgov_image
+    - field.storage.node.localgov_campaigns_banner_image
     - media.type.image
-    - paragraphs.paragraphs_type.localgov_box_link
-id: paragraph.localgov_box_link.localgov_image
-field_name: localgov_image
-entity_type: paragraph
-bundle: localgov_box_link
-label: Image
+    - node.type.localgov_campaigns_overview
+id: node.localgov_campaigns_overview.localgov_campaigns_banner_image
+field_name: localgov_campaigns_banner_image
+entity_type: node
+bundle: localgov_campaigns_overview
+label: 'Banner image'
 description: ''
 required: true
 translatable: false
