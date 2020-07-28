@@ -70,7 +70,7 @@ class CampaignPagesTest extends BrowserTestBase {
     $this->assertSession()->pageTextContains('Banner');
     $this->assertSession()->pageTextContains('Banner colour');
     $this->assertSession()->pageTextContains('Campaign pages');
-    $this->assertSession()->pageTextContains('Full width overview');
+    $this->assertSession()->pageTextContains('Hide page menu');
     $this->assertSession()->pageTextContains('Page content');
     $this->assertSession()->pageTextContains('Select colourway accent');
     $this->assertSession()->pageTextContains('Select colourway gradient');
