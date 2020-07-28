@@ -5,8 +5,8 @@ dependencies:
     - file
     - image
     - node
-id: node.field_banner
-field_name: field_banner
+id: node.localgov_campaigns_banner
+field_name: localgov_campaigns_banner
 entity_type: node
 type: image
 settings:

@@ -94,8 +94,8 @@ abstract class CampaignsAbstractBlockBase extends BlockBase implements Container
    */
   protected function getCampaignBanner() {
     $campaign = $this->getCampaign();
-    if ($campaign->get('field_banner')->entity) {
-      $image = $campaign->get('field_banner')->entity;
+    if ($campaign->get('localgov_campaigns_banner')->entity) {
+      $image = $campaign->get('localgov_campaigns_banner')->entity;
       $image_url = !empty($image) ? $image->uri->value : NULL;
       return $image_url;
     }

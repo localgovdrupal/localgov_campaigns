@@ -3,8 +3,8 @@ status: true
 dependencies:
   module:
     - node
-id: node.field_campaign
-field_name: field_campaign
+id: node.localgov_campaigns_parent
+field_name: localgov_campaigns_parent
 entity_type: node
 type: entity_reference
 settings:

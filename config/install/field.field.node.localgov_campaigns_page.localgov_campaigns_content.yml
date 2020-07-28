@@ -2,8 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_page_content
-    - node.type.localgov_campaigns_overview
+    - field.storage.node.localgov_campaigns_content
+    - node.type.localgov_campaigns_page
     - paragraphs.paragraphs_type.localgov_box_link
     - paragraphs.paragraphs_type.localgov_call_out_box
     - paragraphs.paragraphs_type.localgov_fact_box
@@ -15,14 +15,14 @@ dependencies:
     - paragraphs.paragraphs_type.localgov_video
   module:
     - entity_reference_revisions
-id: node.localgov_campaigns_overview.field_page_content
-field_name: field_page_content
+id: node.localgov_campaigns_page.localgov_campaigns_content
+field_name: localgov_campaigns_content
 entity_type: node
-bundle: localgov_campaigns_overview
+bundle: localgov_campaigns_page
 label: 'Page content'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -36,8 +36,8 @@ settings:
       localgov_link_and_summary: localgov_link_and_summary
       localgov_image: localgov_image
       localgov_text: localgov_text
-      localgov_quote: localgov_quote
       page_section: page_section
+      localgov_quote: localgov_quote
       localgov_video: localgov_video
     target_bundles_drag_drop:
       localgov_box_link:

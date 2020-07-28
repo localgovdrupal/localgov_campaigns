@@ -4,8 +4,8 @@ dependencies:
   module:
     - node
     - options
-id: node.field_select_colorway
-field_name: field_select_colorway
+id: node.localgov_campaigns_colour_grad
+field_name: localgov_campaigns_colour_grad
 entity_type: node
 type: list_string
 settings:

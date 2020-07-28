@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_hide_sidebar
+    - field.storage.node.localgov_campaigns_hide_menu
     - node.type.localgov_campaigns_overview
-id: node.localgov_campaigns_overview.field_hide_sidebar
-field_name: field_hide_sidebar
+id: node.localgov_campaigns_overview.localgov_campaigns_hide_menu
+field_name: localgov_campaigns_hide_menu
 entity_type: node
 bundle: localgov_campaigns_overview
 label: 'Hide page menu'

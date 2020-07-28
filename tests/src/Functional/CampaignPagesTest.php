@@ -66,22 +66,22 @@ class CampaignPagesTest extends BrowserTestBase {
     // Check overview fields.
     $this->drupalGet('/admin/structure/types/manage/localgov_campaigns_overview/fields');
     $this->assertSession()->statusCodeEquals(200);
-    $this->assertSession()->pageTextContains('Summary');
-    $this->assertSession()->pageTextContains('Banner');
-    $this->assertSession()->pageTextContains('Banner colour');
-    $this->assertSession()->pageTextContains('Campaign pages');
-    $this->assertSession()->pageTextContains('Hide page menu');
-    $this->assertSession()->pageTextContains('Page content');
-    $this->assertSession()->pageTextContains('Select colourway accent');
-    $this->assertSession()->pageTextContains('Select colourway gradient');
+    $this->assertSession()->pageTextContains('localgov_campaigns_summary');
+    $this->assertSession()->pageTextContains('localgov_campaigns_banner');
+    $this->assertSession()->pageTextContains('localgov_campaigns_banner_colour');
+    $this->assertSession()->pageTextContains('localgov_campaigns_pages');
+    $this->assertSession()->pageTextContains('localgov_campaigns_hide_menu');
+    $this->assertSession()->pageTextContains('localgov_campaigns_content');
+    $this->assertSession()->pageTextContains('localgov_campaigns_colour_accent');
+    $this->assertSession()->pageTextContains('localgov_campaigns_colour_grad');
 
     // Check page fields.
     $this->drupalGet('/admin/structure/types/manage/localgov_campaigns_page/fields');
     $this->assertSession()->statusCodeEquals(200);
-    $this->assertSession()->pageTextContains('Summary');
-    $this->assertSession()->pageTextContains('Campaign');
-    $this->assertSession()->pageTextContains('Page content');
-    $this->assertSession()->pageTextContains('Topic term');
+    $this->assertSession()->pageTextContains('localgov_campaigns_summary');
+    $this->assertSession()->pageTextContains('localgov_campaigns_parent');
+    $this->assertSession()->pageTextContains('localgov_campaigns_content');
+    $this->assertSession()->pageTextContains('localgov_campaigns_topic');
 
     // Check edit tabs.
     $this->drupalGet('/node/add/localgov_campaigns_overview');

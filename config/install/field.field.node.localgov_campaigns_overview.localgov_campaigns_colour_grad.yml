@@ -2,15 +2,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_select_colourway_accent
+    - field.storage.node.localgov_campaigns_colour_grad
     - node.type.localgov_campaigns_overview
   module:
     - options
-id: node.localgov_campaigns_overview.field_select_colourway_accent
-field_name: field_select_colourway_accent
+id: node.localgov_campaigns_overview.localgov_campaigns_colour_grad
+field_name: localgov_campaigns_colour_grad
 entity_type: node
 bundle: localgov_campaigns_overview
-label: 'Select colourway accent'
+label: 'Select colourway gradient'
 description: ''
 required: false
 translatable: false

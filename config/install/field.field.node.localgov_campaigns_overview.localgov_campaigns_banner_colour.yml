@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_select_colorway
+    - field.storage.node.localgov_campaigns_banner_colour
     - node.type.localgov_campaigns_overview
   module:
     - options
-id: node.localgov_campaigns_overview.field_select_colorway
-field_name: field_select_colorway
+id: node.localgov_campaigns_overview.localgov_campaigns_banner_colour
+field_name: localgov_campaigns_banner_colour
 entity_type: node
 bundle: localgov_campaigns_overview
-label: 'Select colourway gradient'
+label: 'Banner colour'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

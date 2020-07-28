@@ -4,8 +4,8 @@ dependencies:
   module:
     - node
     - options
-id: node.field_banner_colour
-field_name: field_banner_colour
+id: node.localgov_campaigns_banner_colour
+field_name: localgov_campaigns_banner_colour
 entity_type: node
 type: list_string
 settings:

@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_topic_term
+    - field.storage.node.localgov_campaigns_topic
     - node.type.localgov_campaigns_page
     - taxonomy.vocabulary.localgov_topic
-id: node.localgov_campaigns_page.field_topic_term
-field_name: field_topic_term
+id: node.localgov_campaigns_page.localgov_campaigns_topic
+field_name: localgov_campaigns_topic
 entity_type: node
 bundle: localgov_campaigns_page
 label: 'Topic term'
