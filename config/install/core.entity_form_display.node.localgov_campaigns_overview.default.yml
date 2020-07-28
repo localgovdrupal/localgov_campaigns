@@ -2,9 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_campaigns_overview.body
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_banner
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_banner_colour
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_pages
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_hide_menu
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_content
@@ -213,6 +211,4 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden:
-  body: true
-  localgov_campaigns_banner_colour: true
+hidden: {  }

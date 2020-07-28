@@ -3,7 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.localgov_campaigns_page.body
     - field.field.node.localgov_campaigns_page.localgov_campaigns_parent
     - field.field.node.localgov_campaigns_page.localgov_campaigns_topic
     - node.type.localgov_campaigns_page
@@ -15,14 +14,13 @@ targetEntityType: node
 bundle: localgov_campaigns_page
 mode: teaser
 content:
-  body:
-    label: hidden
-    type: text_summary_or_trimmed
+  localgov_campaigns_summary:
+    type: basic_string
     weight: 0
-    settings:
-      trim_length: 300
-    third_party_settings: {  }
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   localgov_campaigns_parent: true
   localgov_campaigns_topic: true

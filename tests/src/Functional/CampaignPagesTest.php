@@ -107,7 +107,7 @@ class CampaignPagesTest extends BrowserTestBase {
       'title' => 'Page 1',
       'type' => 'localgov_campaigns_page',
       'status' => NodeInterface::PUBLISHED,
-      'field_campaign' => ['target_id' => $overview->id()],
+      'localgov_campaigns_parent' => ['target_id' => $overview->id()],
     ]);
 
     $this->drupalGet('overview-1/page-1');

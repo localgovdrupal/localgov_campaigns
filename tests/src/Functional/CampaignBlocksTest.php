@@ -71,14 +71,14 @@ class CampaignBlocksTest extends BrowserTestBase {
     ]);
     // Would be good to work out how to upload images without submitting a form.
     $image = current($this->getTestFiles('image'));
-    $edit['files[field_banner_0]'] = \Drupal::service('file_system')->realpath($image->uri);
+    $edit['files[localgov_campaigns_banner_0]'] = \Drupal::service('file_system')->realpath($image->uri);
     $this->drupalPostForm('/node/' . $overview->id() . '/edit', $edit, 'Save');
     $page_title = $this->randomMachineName(8);
     $page = $this->createNode([
       'title' => $page_title,
       'type' => 'localgov_campaigns_page',
       'status' => NodeInterface::PUBLISHED,
-      'field_campaign' => ['target_id' => $overview->id()],
+      'localgov_campaigns_parent' => ['target_id' => $overview->id()],
     ]);
     $article = $this->createNode([
       'title' => 'Test article',
@@ -126,14 +126,14 @@ class CampaignBlocksTest extends BrowserTestBase {
       'title' => $page1_title,
       'type' => 'localgov_campaigns_page',
       'status' => NodeInterface::PUBLISHED,
-      'field_campaign' => ['target_id' => $overview->id()],
+      'localgov_campaigns_parent' => ['target_id' => $overview->id()],
     ]);
     $page2_title = $this->randomMachineName(8);
     $page2 = $this->createNode([
       'title' => $page2_title,
       'type' => 'localgov_campaigns_page',
       'status' => NodeInterface::PUBLISHED,
-      'field_campaign' => ['target_id' => $overview->id()],
+      'localgov_campaigns_parent' => ['target_id' => $overview->id()],
     ]);
     $article = $this->createNode([
       'title' => 'Test article',
@@ -174,7 +174,7 @@ class CampaignBlocksTest extends BrowserTestBase {
     $this->assertSession()->pageTextNotContains($page2_title);
 
     // Test hide sidebar field.
-    $overview->set('field_hide_sidebar', ['value' => 1]);
+    $overview->set('localgov_campaigns_hide_menu', ['value' => 1]);
     $overview->save();
     $this->drupalGet($overview->toUrl()->toString());
     $this->assertSession()->responseNotContains('block-localgov-campaign-navigation');

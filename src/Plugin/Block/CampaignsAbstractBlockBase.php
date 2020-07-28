@@ -77,8 +77,8 @@ abstract class CampaignsAbstractBlockBase extends BlockBase implements Container
    */
   protected function getCampaign() {
     if ($this->node instanceof NodeInterface) {
-      if ($this->node->bundle() == 'localgov_campaigns_page' and $this->node->field_campaign->entity) {
-        return $this->node->field_campaign->entity;
+      if ($this->node->bundle() == 'localgov_campaigns_page' and $this->node->localgov_campaigns_parent->entity) {
+        return $this->node->localgov_campaigns_parent->entity;
       }
       return $this->node->bundle() == 'localgov_campaigns_overview' ? $this->node : NULL;
     }
@@ -89,7 +89,7 @@ abstract class CampaignsAbstractBlockBase extends BlockBase implements Container
    * Get Campaign Banner.
    *
    * @return string|null
-   *   Stream wrapper url of Campaign overview field_banner,
+   *   Stream wrapper url of Campaign overview localgov_campaigns_banner,
    *   or NULL if no image field set.
    */
   protected function getCampaignBanner() {
