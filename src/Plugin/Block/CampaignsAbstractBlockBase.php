@@ -9,6 +9,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Routing\CurrentRouteMatch;
 use Drupal\Core\Session\AccountInterface;
+use Drupal\file\Entity\File;
 use Drupal\node\NodeInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -94,10 +95,12 @@ abstract class CampaignsAbstractBlockBase extends BlockBase implements Container
    */
   protected function getCampaignBanner() {
     $campaign = $this->getCampaign();
-    if ($campaign->get('localgov_campaigns_banner')->entity) {
-      $image = $campaign->get('localgov_campaigns_banner')->entity;
-      $image_url = !empty($image) ? $image->uri->value : NULL;
-      return $image_url;
+    if ($campaign->get('localgov_campaigns_banner_image')->entity) {
+      $fid = $campaign->get('localgov_campaigns_banner_image')->entity->field_media_image[0]->getValue()['target_id'];
+      $file = File::load($fid);
+      if (!is_null($file)) {
+        return $file->url();
+      }
     }
     return NULL;
   }

@@ -2,20 +2,19 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_banner
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_pages
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_hide_menu
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_content
-    - field.field.node.localgov_campaigns_overview.localgov_campaigns_colour_grad
+    - field.field.node.localgov_campaigns_overview.localgov_campaigns_banner_image
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_colour_accent
+    - field.field.node.localgov_campaigns_overview.localgov_campaigns_colour_grad
+    - field.field.node.localgov_campaigns_overview.localgov_campaigns_content
+    - field.field.node.localgov_campaigns_overview.localgov_campaigns_hide_menu
+    - field.field.node.localgov_campaigns_overview.localgov_campaigns_pages
     - field.field.node.localgov_campaigns_overview.localgov_campaigns_summary
-    - image.style.thumbnail
     - node.type.localgov_campaigns_overview
   module:
     - field_group
-    - image
     - layout_paragraphs
     - localgov_core
+    - media_library
     - path
 third_party_settings:
   field_group:
@@ -52,6 +51,7 @@ third_party_settings:
     group_banner:
       children:
         - localgov_campaigns_banner
+        - localgov_campaigns_banner_image
         - localgov_campaigns_colour_grad
         - localgov_campaigns_colour_accent
       parent_name: group_tabs
@@ -105,26 +105,24 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  localgov_campaigns_banner:
-    weight: 27
+  localgov_campaigns_banner_image:
+    type: media_library_widget
+    weight: 28
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      media_types: {  }
     third_party_settings: {  }
-    type: image_image
     region: content
-  localgov_campaigns_pages:
-    weight: 34
+  localgov_campaigns_colour_accent:
+    weight: 30
     settings: {  }
     third_party_settings: {  }
-    type: localgov_entity_reference_labels
+    type: options_select
     region: content
-  localgov_campaigns_hide_menu:
-    type: boolean_checkbox
-    weight: 33
+  localgov_campaigns_colour_grad:
+    type: options_select
+    weight: 29
     region: content
-    settings:
-      display_label: true
+    settings: {  }
     third_party_settings: {  }
   localgov_campaigns_content:
     type: layout_paragraphs
@@ -135,17 +133,18 @@ content:
       require_layouts: 1
     third_party_settings: {  }
     region: content
-  localgov_campaigns_colour_grad:
-    type: options_select
-    weight: 29
+  localgov_campaigns_hide_menu:
+    type: boolean_checkbox
+    weight: 33
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  localgov_campaigns_pages:
+    weight: 34
     settings: {  }
     third_party_settings: {  }
-  localgov_campaigns_colour_accent:
-    weight: 30
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
+    type: localgov_entity_reference_labels
     region: content
   localgov_campaigns_summary:
     weight: 1

@@ -78,7 +78,6 @@ class CampaignBlocksTest extends BrowserTestBase {
       'title' => $page_title,
       'type' => 'localgov_campaigns_page',
       'status' => NodeInterface::PUBLISHED,
-      'localgov_campaigns_parent' => ['target_id' => $overview->id()],
     ]);
     $article = $this->createNode([
       'title' => 'Test article',
