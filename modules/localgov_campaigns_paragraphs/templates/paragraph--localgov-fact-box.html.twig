@@ -38,7 +38,11 @@
  * @ingroup themeable
  */
 #}
-<blockquote class="pull-out-quote">
-  <p>{{ content.field_text_plain }}</p>
-  <footer>- {{ content.field_author }}</footer>
-</blockquote>
+{%
+  set class = 'fact-box-' ~ paragraph.field_background.getValue[0].value
+%}
+<div class="fact-box {{ class }} level-height-item">
+  <p class="fact-opening">{{ content.localgov_above_text }}</p>
+  <p class="fact">{{ content.localgov_fact }}</p>
+  <p class="fact-closing">{{ content.localgov_below_text }}</p>
+</div>

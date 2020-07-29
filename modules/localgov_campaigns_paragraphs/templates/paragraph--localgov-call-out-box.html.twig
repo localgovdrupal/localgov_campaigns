@@ -38,7 +38,12 @@
  * @ingroup themeable
  */
 #}
-<div{{ attributes.addClass('row') }}>
-  <div class="col-sm-6">{{ content.field_text }}</div>
-  <div class="col-sm-6">{{ content.field_image }}</div>
+<div class="call-out-box" {% if background_url is defined and background_url %}style="background-image: url('{{ background_url }}')"{% endif %}>
+  <div class="call-out-content">
+    <h2>{{ content.localgov_header_text }}</h2>
+    {{ content.localgov_body_text }}
+    <a href="{{ button_url }}" class="btn btn-primary">
+      <span>{{ paragraph.localgov_button.getValue[0].title }}</span>
+    </a>
+  </div>
 </div>

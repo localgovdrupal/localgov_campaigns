@@ -38,12 +38,9 @@
  * @ingroup themeable
  */
 #}
-<div class="call-out-box" {% if background_url is defined and background_url %}style="background-image: url('{{ background_url }}')"{% endif %}>
-  <div class="call-out-content col-12 col-md-6 p-4">
-    <h2>{{ content.field_header_text }}</h2>
-    {{ content.field_body_text }}
-    <a href="{{ button_url }}" class="btn btn-primary">
-      <span>{{ paragraph.field_button.getValue[0].title }}</span>
-    </a>
-  </div>
+<div class="box-link">
+  <a href="{{ localgov_link.url }}">
+    {{ content.localgov_image }}
+  	<span>{{ localgov_link.title }}</span>
+  </a>
 </div>
