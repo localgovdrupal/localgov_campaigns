@@ -7,7 +7,7 @@ use Drupal\Tests\node\Traits\NodeCreationTrait;
 use Drupal\node\Entity\Node;
 
 /**
- * Kernel tests to check field_campaign_pages field gets updated correctly.
+ * Kernel tests to check localgov_campaigns_pages field gets updated correctly.
  *
  * @group localgov_campaigns
  */
@@ -31,6 +31,8 @@ class CampaignPagesTest extends KernelTestBase {
     'layout_discovery',
     'layout_paragraphs',
     'link',
+    'media',
+    'media_library',
     'menu_ui',
     'node',
     'options',
@@ -41,6 +43,7 @@ class CampaignPagesTest extends KernelTestBase {
     'text',
     'token',
     'user',
+    'views',
     'localgov_core',
     'localgov_campaigns',
   ];
@@ -52,6 +55,7 @@ class CampaignPagesTest extends KernelTestBase {
     parent::setup();
 
     $this->installEntitySchema('user');
+    $this->installEntitySchema('media');
     $this->installEntitySchema('node');
     $this->installEntitySchema('file');
     $this->installSchema('node', ['node_access']);
@@ -106,7 +110,7 @@ class CampaignPagesTest extends KernelTestBase {
       'title' => 'Another Overview Page',
       'type' => 'localgov_campaigns_overview',
     ]);
-    $page2->set('field_campaign', ['target_id' => $new_overview->id()]);
+    $page2->set('localgov_campaigns_parent', ['target_id' => $new_overview->id()]);
     $page2->save();
     $new_overview = Node::load($new_overview->id());
     $this->assertEquals($new_overview->id(), $page2->localgov_campaigns_parent->entity->id());

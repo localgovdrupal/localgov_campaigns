@@ -2,6 +2,8 @@
 
 namespace Drupal\Tests\localgov_campaigns\Functional;
 
+use Drupal\file\Entity\File;
+use Drupal\media\Entity\Media;
 use Drupal\node\NodeInterface;
 use Drupal\Tests\BrowserTestBase;
 use Drupal\Tests\TestFileCreationTrait;
@@ -61,22 +63,34 @@ class CampaignBlocksTest extends BrowserTestBase {
   public function testCampaignBannerBlock() {
     $this->drupalLogin($this->adminUser);
     $this->drupalPlaceBlock('localgov_campaign_banner');
+    $this->drupalLogout();
+
+    // Create a media image.
+    $image = current($this->getTestFiles('image'));
+    $file = File::create([
+      'uri' => $image->uri,
+      'status' => FILE_STATUS_PERMANENT,
+    ]);
+    $file->save();
+    $media_image = Media::create([
+      'bundle' => 'image',
+      'field_media_image' => ['target_id' => $file->id()],
+    ]);
+    $media_image->save();
 
     // Create some nodes.
     $overview_title = $this->randomMachineName(8);
     $overview = $this->createNode([
       'title' => $overview_title,
       'type' => 'localgov_campaigns_overview',
+      'localgov_campaigns_banner_image' => ['target_id' => $media_image->id()],
       'status' => NodeInterface::PUBLISHED,
     ]);
-    // Would be good to work out how to upload images without submitting a form.
-    $image = current($this->getTestFiles('image'));
-    $edit['files[localgov_campaigns_banner_0]'] = \Drupal::service('file_system')->realpath($image->uri);
-    $this->drupalPostForm('/node/' . $overview->id() . '/edit', $edit, 'Save');
     $page_title = $this->randomMachineName(8);
     $page = $this->createNode([
       'title' => $page_title,
       'type' => 'localgov_campaigns_page',
+      'localgov_campaigns_parent' => $overview->id(),
       'status' => NodeInterface::PUBLISHED,
     ]);
     $article = $this->createNode([
@@ -84,7 +98,6 @@ class CampaignBlocksTest extends BrowserTestBase {
       'type' => 'article',
       'status' => NodeInterface::PUBLISHED,
     ]);
-    $this->drupalLogout();
 
     // Test campaign overview.
     $this->drupalGet($overview->toUrl()->toString());
