@@ -10,7 +10,7 @@
     "drupal/paragraphs": "^1.11",
     "drupal/pathauto": "^1.8",
     "drupal/token": "^1.7",
-    "localgovdrupal/localgov_paragraphs": "dev-master"
+    "localgovdrupal/localgov_paragraphs": "dev-feature/homepage-support"
   },
   "extra": {
     "composer-exit-on-patch-failure": true,
