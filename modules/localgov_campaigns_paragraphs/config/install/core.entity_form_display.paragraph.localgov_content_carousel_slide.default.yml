@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_content_carousel_slide.localgov_add_read_more_link
+    - field.field.paragraph.localgov_content_carousel_slide.localgov_link_text
+    - field.field.paragraph.localgov_content_carousel_slide.localgov_node_reference
+    - field.field.paragraph.localgov_content_carousel_slide.localgov_slide_layout
+    - paragraphs.paragraphs_type.localgov_content_carousel_slide
+id: paragraph.localgov_content_carousel_slide.default
+targetEntityType: paragraph
+bundle: localgov_content_carousel_slide
+mode: default
+content:
+  localgov_add_read_more_link:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  localgov_link_text:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  localgov_node_reference:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  localgov_slide_layout:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_content_carousel.localgov_heading_level
+    - field.field.paragraph.localgov_content_carousel.localgov_paragraphs
+    - field.field.paragraph.localgov_content_carousel.localgov_title
+    - paragraphs.paragraphs_type.localgov_content_carousel
+  module:
+    - entity_reference_revisions
+id: paragraph.localgov_content_carousel.default
+targetEntityType: paragraph
+bundle: localgov_content_carousel
+mode: default
+content:
+  localgov_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  localgov_heading_level: true
+  localgov_title: true

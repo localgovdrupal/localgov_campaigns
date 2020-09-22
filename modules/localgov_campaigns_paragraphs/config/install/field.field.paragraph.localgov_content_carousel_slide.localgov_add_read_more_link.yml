@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_add_read_more_link
+    - paragraphs.paragraphs_type.localgov_content_carousel_slide
+id: paragraph.localgov_content_carousel_slide.localgov_add_read_more_link
+field_name: localgov_add_read_more_link
+entity_type: paragraph
+bundle: localgov_content_carousel_slide
+label: 'Add read more link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

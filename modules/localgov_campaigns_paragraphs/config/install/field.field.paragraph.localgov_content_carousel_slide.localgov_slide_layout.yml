@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_slide_layout
+    - paragraphs.paragraphs_type.localgov_content_carousel_slide
+  module:
+    - options
+id: paragraph.localgov_content_carousel_slide.localgov_slide_layout
+field_name: localgov_slide_layout
+entity_type: paragraph
+bundle: localgov_content_carousel_slide
+label: 'Slide layout'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: image_left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

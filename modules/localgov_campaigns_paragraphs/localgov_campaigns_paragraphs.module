@@ -18,6 +18,10 @@ function localgov_campaigns_paragraphs_theme($existing, $type, $theme, $path) {
       'template' => 'field--paragraph--localgov-paragraphs--localgov-box-links-listing',
       'base hook' => 'field',
     ],
+    'node__carousel_slide' => [
+      'template' => 'node--carousel-slide',
+      'base hook' => 'node',
+    ],
     'paragraph__localgov_accordion' => [
       'template' => 'paragraph--localgov-accordion',
       'base hook' => 'paragraph',
@@ -36,6 +40,14 @@ function localgov_campaigns_paragraphs_theme($existing, $type, $theme, $path) {
     ],
     'paragraph__localgov_call_out_box' => [
       'template' => 'paragraph--localgov-call-out-box',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__localgov_content_carousel' => [
+      'template' => 'paragraph--localgov-content-carousel',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__localgov_content_carousel_slide' => [
+      'template' => 'paragraph--localgov-content-carousel-slide',
       'base hook' => 'paragraph',
     ],
     'paragraph__localgov_documents' => [

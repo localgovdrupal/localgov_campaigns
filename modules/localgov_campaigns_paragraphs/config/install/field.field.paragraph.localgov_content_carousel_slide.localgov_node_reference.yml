@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_node_reference
+    - node.type.localgov_campaigns_overview
+    - node.type.localgov_campaigns_page
+    - node.type.localgov_services_landing
+    - node.type.localgov_services_page
+    - node.type.localgov_services_sublanding
+    - paragraphs.paragraphs_type.localgov_content_carousel_slide
+id: paragraph.localgov_content_carousel_slide.localgov_node_reference
+field_name: localgov_node_reference
+entity_type: paragraph
+bundle: localgov_content_carousel_slide
+label: 'Slide content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      localgov_campaigns_overview: localgov_campaigns_overview
+      localgov_campaigns_page: localgov_campaigns_page
+      localgov_services_landing: localgov_services_landing
+      localgov_services_page: localgov_services_page
+      localgov_services_sublanding: localgov_services_sublanding
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: localgov_campaigns_overview
+field_type: entity_reference
