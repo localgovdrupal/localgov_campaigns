@@ -15,7 +15,7 @@ localgov_content_carousel:
     base:
       css/localgov-content-carousel.css: {}
   js:
-    js/localgov-content-carousel.es6.js: {}
+    js/localgov-content-carousel.js: {}
   dependencies:
     - localgov_campaigns_paragraphs/glider
 
