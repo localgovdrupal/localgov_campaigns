@@ -10,6 +10,15 @@ localgov_accordion:
   js:
     js/localgov-accordion.js: {}
 
+localgov_content_carousel:
+  css:
+    base:
+      css/localgov-content-carousel.css: {}
+  js:
+    js/localgov-content-carousel.es6.js: {}
+  dependencies:
+    - localgov_campaigns_paragraphs/glider
+
 localgov_box_links_listing:
   css:
     base:
@@ -28,3 +37,11 @@ localgov_tabs:
     js/localgov-tabs.js: {}
   dependencies:
     - localgov_campaigns_paragraphs/localgov_accordion
+
+glider:
+  css:
+    base:
+      vendor/glider/glide.core.min.css: { minified: true }
+      vendor/glider/glide.theme.min.css: { minified: true }
+  js:
+    vendor/glider/glider.min.js: { minified: true }

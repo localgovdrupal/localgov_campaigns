@@ -150,6 +150,18 @@ function localgov_campaigns_paragraphs_preprocess_paragraph(&$variables) {
     $variables['theme'] = $paragraph->get('localgov_colour_theme')->value;
   }
 
+  if ($paragraph->bundle() === 'localgov_content_carousel_slide') {
+    $variables['slide_layout'] = $paragraph->get('localgov_slide_layout')->value;
+    // Shouldn't this be done in node preprocess for the carousel slide?
+    if ($paragraph->get('localgov_add_read_more_link')->value) {
+      $link_text = t('Read more');
+      if (!$paragraph->get('localgov_link_text')->isEmpty()) {
+        $link_text = $paragraph->get('localgov_link_text')->first()->value;
+      }
+    }
+    $url = $paragraph->get('localgov_node_reference')->entity->toUrl();
+  }
+
   if ($paragraph->bundle() === 'localgov_table') {
     $variables['table_theme'] = $paragraph->get('localgov_table_theme')->value;
   }
