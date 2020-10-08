@@ -150,6 +150,13 @@ function localgov_campaigns_paragraphs_preprocess_paragraph(&$variables) {
     $variables['theme'] = $paragraph->get('localgov_colour_theme')->value;
   }
 
+  if ($paragraph->bundle() === 'localgov_content_carousel') {
+    // Only attach content carousel library to non-admin pages.
+    if (!\Drupal::service('router.admin_context')->isAdminRoute()) {
+      $variables['#attached']['library'][] = 'localgov_campaigns_paragraphs/localgov_content_carousel';
+    }
+  }
+
   if ($paragraph->bundle() === 'localgov_content_carousel_slide') {
     $variables['slide_layout'] = $paragraph->get('localgov_slide_layout')->value;
   }
