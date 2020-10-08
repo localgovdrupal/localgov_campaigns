@@ -7,31 +7,11 @@ dependencies:
     - field.field.paragraph.localgov_content_carousel_slide.localgov_node_reference
     - field.field.paragraph.localgov_content_carousel_slide.localgov_slide_layout
     - paragraphs.paragraphs_type.localgov_content_carousel_slide
-  module:
-    - options
 id: paragraph.localgov_content_carousel_slide.default
 targetEntityType: paragraph
 bundle: localgov_content_carousel_slide
 mode: default
 content:
-  localgov_add_read_more_link:
-    weight: 2
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  localgov_link_text:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   localgov_node_reference:
     weight: 0
     label: hidden
@@ -41,11 +21,7 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  localgov_slide_layout:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: list_key
-    region: content
-hidden: {  }
+hidden:
+  localgov_add_read_more_link: true
+  localgov_link_text: true
+  localgov_slide_layout: true
