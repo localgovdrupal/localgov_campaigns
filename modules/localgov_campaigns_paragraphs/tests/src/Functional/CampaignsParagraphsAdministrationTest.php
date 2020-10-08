@@ -85,6 +85,20 @@ class CampaignsParagraphsAdministrationTest extends ParagraphsTestBase {
     $this->assertSession()->pageTextContains('localgov_below_text');
     $this->assertSession()->pageTextContains('localgov_fact');
 
+    // Check 'Featured teasers' fields.
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_featured_teasers/fields');
+    $this->assertSession()->pageTextContains('localgov_title');
+    $this->assertSession()->pageTextContains('localgov_heading_level');
+    $this->assertSession()->pageTextContains('localgov_paragraphs');
+
+    // Check 'Featured teaser' fields.
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_featured_teaser/fields');
+    $this->assertSession()->pageTextContains('localgov_title');
+    $this->assertSession()->pageTextContains('localgov_heading_level');
+    $this->assertSession()->pageTextContains('localgov_image');
+    $this->assertSession()->pageTextContains('localgov_text');
+    $this->assertSession()->pageTextContains('localgov_link');
+
     // Check 'Key contacts' fields.
     $this->drupalGet('/admin/structure/paragraphs_type/localgov_key_contacts/fields');
     $this->assertSession()->pageTextContains('localgov_title');
@@ -111,6 +125,17 @@ class CampaignsParagraphsAdministrationTest extends ParagraphsTestBase {
     $this->assertSession()->pageTextContains('localgov_title');
     $this->assertSession()->pageTextContains('localgov_heading_level');
     $this->assertSession()->pageTextContains('localgov_text');
+
+    // Check 'Media with text' fields.
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_media_with_text/fields');
+    $this->assertSession()->pageTextContains('localgov_title');
+    $this->assertSession()->pageTextContains('localgov_heading_level');
+    $this->assertSession()->pageTextContains('localgov_text');
+    $this->assertSession()->pageTextContains('localgov_link');
+    $this->assertSession()->pageTextContains('localgov_media_item');
+    $this->assertSession()->pageTextContains('localgov_media_position');
+    $this->assertSession()->pageTextContains('localgov_media_with_text_style');
+    $this->assertSession()->pageTextContains('localgov_opens_in_a_new_window');
 
     // Check 'Link and summary' fields.
     $this->drupalGet('/admin/structure/paragraphs_type/localgov_link_and_summary/fields');
