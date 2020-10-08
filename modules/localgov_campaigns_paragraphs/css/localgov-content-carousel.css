@@ -1,3 +1,42 @@
 .content-carousel .glide__arrow[disabled] {
   display: none;
 }
+
+.content-carousel .glide__arrow {
+  color: #333;
+}
+
+.content-carousel .glide__arrow--left {
+  left: 0.25rem;
+}
+
+.content-carousel .glide__arrow--right {
+  right: 0.25rem;
+}
+
+.content-carousel-slide__inner {
+  align-items: stretch;
+  display: flex;
+}
+
+.content-carousel .glide__slides {
+  background-color: #f2f2f2;
+}
+
+.content-carousel-slide__body {
+  flex: 1 0 50%;
+  padding: 2rem 3rem;
+}
+
+.content-carousel-slide__image * {
+  height: 100%;
+}
+
+.content-carousel-slide__image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-carousel-slide--image-right .content-carousel-slide__image {
+  order: 2;
+}

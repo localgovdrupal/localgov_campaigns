@@ -72,18 +72,21 @@
  * @ingroup themeable
  */
 #}
-<article{{ attributes }}>
-
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  <div{{ content_attributes }}>
-    {{ content }}
+<article{{ attributes.addClass('content-carousel-slide__inner') }}>
+  <div{{ content_attributes.addClass('content-carousel-slide__body') }}>
+    <h3>{{ label }}</h3>
+    {% if content.localgov_campaigns_summary.0 %}
+      <p class="content-carousel-slide__text">
+        {{ content.localgov_campaigns_summary }}
+      </p>
+    {% endif %}
+    {% if link %}
+      <a class="content-carousel-slide__cta" href="{{ url }}" rel="bookmark">{{ link.text }}</a>
+    {% endif %}
   </div>
-
+  {% if content.localgov_campaigns_banner_image.0 %}
+    <div class="content-carousel-slide__image">
+      {{ content.localgov_campaigns_banner_image }}
+    </div>
+  {% endif %}
 </article>

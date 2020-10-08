@@ -32,6 +32,7 @@
  *   current user is a logged-in member.
  * - is_admin: Flag for admin user status. Will be true when the current user
  *   is an administrator.
+ * - slide_layout: String (image-left or image-right).
  *
  * @see template_preprocess_paragraph()
  *
@@ -45,9 +46,11 @@
     view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     not paragraph.isPublished() ? 'paragraph--unpublished',
     'content-carousel-slide',
+    'content-carousel-slide--' ~ slide_layout|clean_class,
     'glide__slide'
   ]
 %}
+
 {% block paragraph %}
   <div{{ attributes.addClass(classes) }}>
     {% block content %}

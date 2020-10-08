@@ -152,14 +152,6 @@ function localgov_campaigns_paragraphs_preprocess_paragraph(&$variables) {
 
   if ($paragraph->bundle() === 'localgov_content_carousel_slide') {
     $variables['slide_layout'] = $paragraph->get('localgov_slide_layout')->value;
-    // Shouldn't this be done in node preprocess for the carousel slide?
-    if ($paragraph->get('localgov_add_read_more_link')->value) {
-      $link_text = t('Read more');
-      if (!$paragraph->get('localgov_link_text')->isEmpty()) {
-        $link_text = $paragraph->get('localgov_link_text')->first()->value;
-      }
-    }
-    $url = $paragraph->get('localgov_node_reference')->entity->toUrl();
   }
 
   if ($paragraph->bundle() === 'localgov_table') {
@@ -185,6 +177,30 @@ function localgov_campaigns_paragraphs_preprocess_paragraph(&$variables) {
     if (!$paragraph->get('field_video_url')->isEmpty()) {
       $video = $paragraph->get('field_video_url')->first()->getValue();
       $variables['field_video_url'] = $video['uri'];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function localgov_campaigns_paragraphs_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
+  if ($variables['view_mode'] === 'carousel_slide') {
+    // Get parent paragraph.
+    $referencing_field = $node->_referringItem->getParent();
+    $parent = $referencing_field->getParent();
+    $parent_entity = $parent->getEntity();
+    $parent_type = $parent_entity->bundle();
+    if ($parent_type === 'localgov_content_carousel_slide') {
+      // Check if 'Read more' link should be added.
+      if ($parent_entity->get('localgov_add_read_more_link')->value) {
+        $variables['link']['text'] = t('Read more');
+        if (!$parent_entity->get('localgov_link_text')->isEmpty()) {
+          $variables['link']['text'] = $parent_entity->get('localgov_link_text')->first()->value;
+        }
+      }
     }
   }
 }
