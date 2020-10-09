@@ -1,0 +1,119 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.localgov_geo.map_only
+    - field.field.localgov_geo.address.accessibility
+    - field.field.localgov_geo.address.external_id
+    - field.field.localgov_geo.address.location
+    - field.field.localgov_geo.address.postal_address
+    - localgov_geo.localgov_geo_type.address
+  module:
+    - geofield_map
+id: localgov_geo.address.map_only
+targetEntityType: localgov_geo
+bundle: address
+mode: map_only
+content:
+  location:
+    weight: 0
+    label: visually_hidden
+    settings:
+      map_dimensions:
+        width: 100%
+        height: 400px
+      map_empty:
+        empty_behaviour: '0'
+        empty_message: 'No Geofield Value entered for this field'
+      map_center:
+        lat: '42'
+        lon: '12.5'
+        center_force: 0
+        geocode: 'Find my location'
+      map_zoom_and_pan:
+        zoom:
+          initial: '10'
+          min: '1'
+          max: '22'
+          finer: '0'
+          force: 0
+        gestureHandling: auto
+        scrollwheel: '1'
+        draggable: '1'
+        map_reset_position: TOP_RIGHT
+        map_reset: 0
+      map_controls:
+        zoom_control: '1'
+        map_type_id: roadmap
+        map_type_control: '1'
+        map_type_control_options_type_ids:
+          roadmap: roadmap
+          satellite: satellite
+          hybrid: 0
+          terrain: 0
+        scale_control: '1'
+        disable_default_ui: 0
+        street_view_control: 0
+        fullscreen_control: 0
+      map_marker_and_infowindow:
+        icon_image_mode: icon_file
+        icon_file_wrapper:
+          icon_file:
+            fids: ''
+            upload_button: Upload
+            remove_button: Remove
+            upload: ''
+            is_svg: false
+          image_style: geofield_map_default_icon_style
+        icon_image_path: ''
+        infowindow_field: title
+        view_mode: map_only
+        tooltip_field: title
+        multivalue_split: 0
+        force_open: 0
+      map_additional_options: ''
+      map_geometries_options: '{"strokeColor":"black","strokeOpacity":"0.8","strokeWeight":2,"fillColor":"blue","fillOpacity":"0.1","clickable":false}'
+      map_oms:
+        map_oms_control: '1'
+        map_oms_options: '{"markersWontMove":"true","markersWontHide":"true","basicFormatEvents":"true","nearbyDistance":3}'
+      custom_style_map:
+        custom_style_name: ''
+        custom_style_options: ''
+        custom_style_control: 0
+        custom_style_default: 0
+      map_markercluster:
+        markercluster_additional_options: '{"maxZoom":12,"gridSize":50}'
+        markercluster_control: 0
+      map_geocoder:
+        settings:
+          position: TOP_LEFT
+          input_size: '25'
+          providers:
+            localgov_default_osm:
+              weight: '0'
+              checked: 0
+          min_terms: '4'
+          delay: '800'
+          zoom: '16'
+          options: ''
+          infowindow: 0
+        control: 0
+      map_lazy_load:
+        lazy_load: '1'
+      map_additional_libraries:
+        places: 0
+        drawing: 0
+        geometry: 0
+        visualization: 0
+      gmap_api_key: ''
+    third_party_settings: {  }
+    type: geofield_google_map
+    region: content
+hidden:
+  accessibility: true
+  created: true
+  external_id: true
+  postal_address: true
+  search_api_excerpt: true
+  status: true
+  uid: true

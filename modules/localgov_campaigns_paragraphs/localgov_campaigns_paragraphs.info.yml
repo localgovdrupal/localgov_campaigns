@@ -11,5 +11,6 @@ dependencies:
   - tablefield:tablefield
   - localgov_core:localgov_core
   - localgov_core:localgov_media
+  - localgov_geo:localgov_geo
   - localgov_paragraphs:localgov_paragraphs
   - localgov_paragraphs:localgov_homepage_paragraphs

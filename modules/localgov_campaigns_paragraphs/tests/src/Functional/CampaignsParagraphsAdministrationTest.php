@@ -126,6 +126,11 @@ class CampaignsParagraphsAdministrationTest extends ParagraphsTestBase {
     $this->assertSession()->pageTextContains('localgov_heading_level');
     $this->assertSession()->pageTextContains('localgov_text');
 
+    // Check 'Map' fields.
+    $this->drupalGet('/admin/structure/paragraphs_type/localgov_map/fields');
+    $this->assertSession()->pageTextContains('localgov_geo_type');
+    $this->assertSession()->pageTextContains('localgov_contact_location');
+
     // Check 'Media with text' fields.
     $this->drupalGet('/admin/structure/paragraphs_type/localgov_media_with_text/fields');
     $this->assertSession()->pageTextContains('localgov_title');
