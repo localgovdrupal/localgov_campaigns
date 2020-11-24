@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.localgov_map.localgov_contact_location
+    - field.field.paragraph.localgov_map.localgov_geo_type
+    - paragraphs.paragraphs_type.localgov_map
+  module:
+    - geolocation
+id: paragraph.localgov_map.default
+targetEntityType: paragraph
+bundle: localgov_map
+mode: default
+content:
+  localgov_contact_location:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
+    region: content
+  localgov_geo_type:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -5,10 +5,12 @@
   "homepage": "https://github.com/localgovdrupal/localgov_campaigns",
   "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
     "drupal/layout_paragraphs": "dev-1.0.x",
     "drupal/tablefield": "dev-2.x",
     "drupal/viewsreference": "^2.0",
+    "localgovdrupal/localgov_geo": "^1.0@alpha",
     "localgovdrupal/localgov_paragraphs": "^1.0@alpha"
   },
   "extra": {

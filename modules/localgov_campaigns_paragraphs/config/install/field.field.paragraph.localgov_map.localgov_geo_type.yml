@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.localgov_geo_type
+    - localgov_geo.localgov_geo_type.address
+    - paragraphs.paragraphs_type.localgov_map
+id: paragraph.localgov_map.localgov_geo_type
+field_name: localgov_geo_type
+entity_type: paragraph
+bundle: localgov_map
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:localgov_geo'
+  handler_settings:
+    target_bundles:
+      address: address
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
