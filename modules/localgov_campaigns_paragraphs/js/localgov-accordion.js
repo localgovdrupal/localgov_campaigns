@@ -38,7 +38,7 @@
       var initClass = 'accordion--initialised';
       var openClass = 'accordion-pane__content--open';
       var breakpoint = accordion.dataset.accordionTabsSwitch || null;
-      var mq = window.matchMedia('(max-width: \'' + breakpoint + '\')');
+      var mq = window.matchMedia('(max-width: ' + breakpoint + ')');
 
       var create = function create() {
         // Only initialise accordion if it hasn't already been done.

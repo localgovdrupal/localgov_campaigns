@@ -131,7 +131,7 @@
 
             // Add tab list to tabs element.
             tabListNav.append(tabList);
-            tabs.insertBefore(tabListNav, tabPanels[0]);
+            tabPanels[0].parentNode.insertBefore(tabListNav, tabPanels[0]);
 
             // Show the first panel.
             var activeControl = tabList.querySelectorAll('li:first-child button');
